@@ -9,7 +9,6 @@ public class Database {
     public static final String password = "pass123";
 
 
-
     public static Connection getConnection() throws SQLException{
         Connection conn = DriverManager.getConnection(url, user, password);
         return conn;
