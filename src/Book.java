@@ -47,7 +47,7 @@ public class Book {
     public String toString() {
         return id +
                 ", Author: " + author +
-                ". Title: " + title +
+                ", Title: " + title +
                 ", Available: " + (available ? "Yes" : "No")
                 ;
     }
