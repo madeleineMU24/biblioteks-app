@@ -13,8 +13,7 @@ public class Book {
     }
 
     public int getId() {
-        return id;
-    }
+        return id;}
 
     public void setId(int id) {
         this.id = id;
@@ -42,5 +41,14 @@ public class Book {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    @Override
+    public String toString() {
+        return id +
+                ", Author: " + author +
+                ". Title: " + title +
+                ", Available: " + (available ? "Yes" : "No")
+                ;
     }
 }
