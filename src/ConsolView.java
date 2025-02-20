@@ -123,6 +123,7 @@ public class ConsolView {
         }else {
             System.out.println(" ---Loaned books---");
             loanedBooks.forEach(book -> System.out.println("Author: " + book.getAuthor() + ", Title: " + book.getTitle()));
-            }
+            System.out.println("\n");
+        }
         }
     }
