@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,7 +10,7 @@ public class ConsolView {
     public void showMenu(){
 
         while (true){
-            System.out.println("----Menu----");
+            System.out.println("  ----Menu----");
             System.out.println("1. I'm a user");
             System.out.println("2. I'm a admin");
             System.out.println("0. Quit");
@@ -26,7 +25,7 @@ public class ConsolView {
                 case "0":
                     return;
                 default:
-                    System.out.println("Invalid choice, try again");
+                    System.out.println("Invalid choice, try again\n");
             }
         }
 
@@ -34,7 +33,7 @@ public class ConsolView {
 
     public void showAdminMenu() {
         while (true){
-            System.out.println("----Admin menu----");
+            System.out.println("  ----Admin menu----");
             System.out.println("1. Show all books and availability");
             System.out.println("2. Add book");
             System.out.println("3. Delete book");
@@ -52,14 +51,14 @@ public class ConsolView {
                 case "0":
                     return;
                 default:
-                    System.out.println("Invalid choice, try again");
+                    System.out.println("Invalid choice, try again\n");
             }
         }
     }
 
     public void showUserMenu() {
         while (true){
-            System.out.println("----User menu----");
+            System.out.println("  ----User menu----");
             System.out.println("1. Show all books and availability");
             System.out.println("2. Loan a book");
             System.out.println("3. Return a book");
@@ -80,14 +79,15 @@ public class ConsolView {
                 case "0":
                     return;
                 default:
-                    System.out.println("Invalid choice, try again");
+                    System.out.println("Invalid choice, try again\n");
             }
         }
     }
     public void getAllBooks(){
         List<Book> books = bookDAO.getAllBooks();
-        System.out.println("---Books---");
+        System.out.println(" ---Books---");
         books.forEach(s -> System.out.println(s));
+        System.out.println("\n");
     }
 
     public void addBook(){
@@ -117,9 +117,12 @@ public class ConsolView {
         loanDAO.returnBook(title);
     }
     public void listLoanedBooks(){
-        System.out.println("Your loaned books:");
-
-    loanDAO.listLoanedBooks();
+        List<Book> loanedBooks = loanDAO.listLoanedBooks();
+        if(loanedBooks.isEmpty()){
+            System.out.println("  *Empty*  Time to start reading!\n");
+        }else {
+            System.out.println(" ---Loaned books---");
+            loanedBooks.forEach(book -> System.out.println("Author: " + book.getAuthor() + ", Title: " + book.getTitle()));
+            }
+        }
     }
-
-}

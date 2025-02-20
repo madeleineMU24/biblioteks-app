@@ -4,7 +4,6 @@ import java.util.List;
 
 public class BookDAO {
 
-
     public void addBook (String title, String author, boolean available){
         String sql = "INSERT INTO book (title, author, available) VALUES (?, ?, ?)";
 
@@ -17,10 +16,10 @@ public class BookDAO {
             stmt.setBoolean(3, true);
 
             stmt.executeUpdate();
-            System.out.println("Book successfully added");
+            System.out.println("Book successfully added\n");
 
         }catch (SQLException e){
-            System.out.println("Failed to add book");
+            System.out.println("Failed to add book\n");
             e.printStackTrace();
         }
     }
@@ -40,7 +39,7 @@ public class BookDAO {
             }
 
         } catch (SQLException e) {
-            System.out.println("Failed to get the books");
+            System.out.println("Failed to get the books\n");
             e.printStackTrace();
         }
         return books;
@@ -57,13 +56,13 @@ public class BookDAO {
             int affectedRown = stmt.executeUpdate();
 
             if(affectedRown > 0){
-                System.out.println("Product succesfully deleted");
+                System.out.println("Product successfully deleted\n");
             }else {
-                System.out.println("No book with that title");
+                System.out.println("No book with that title\n");
             }
 
         }catch (SQLException e){
-        System.out.println("Failed to delete the book");
+        System.out.println("Failed to delete the book\n");
         e.printStackTrace();
         }
     }

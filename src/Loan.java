@@ -15,7 +15,6 @@ public class Loan {
         this.book_id = book_id;
         this.loan_date = loan_date;
         this.return_date = return_date;
-
     }
 
     public int getId() {
@@ -56,5 +55,14 @@ public class Loan {
 
     public void setReturn_date(Date return_date) {
         this.return_date = return_date;
+    }
+
+    @Override
+    public String toString() {
+        return id +
+                ", User: " + user_name +
+                ", Book-id: " + book_id +
+                ", Loan-date: " + loan_date +
+                ", Return-date: " + return_date;
     }
 }
