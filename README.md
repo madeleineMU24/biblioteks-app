@@ -7,5 +7,5 @@ Som ensam user kan man låna, lämna tillbaka och kolla vilka böcker man har l�
 Både admin och user kan få en översikt över alla böcker, där det står
 om dom är tillgängliga att låna eller inte.
 
-Allt är tydligt med enkla menyval och informerar om det är något som 
+Det är tydligt med enkla menyval och informerar om det är något som 
 inte funkar :)
