@@ -13,6 +13,7 @@ loan_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 return_date DATE,
 FOREIGN KEY (book_id) REFERENCES book(id));
 
+
 INSERT INTO book (title, author, available) VALUES ('Dark Matter', 'Blake Crouch', 1),
 ('The Philosophers Stone', 'J.K Rowling', 1),
 ('Chambers of Secret', 'J.K Rowling', 1),
@@ -21,3 +22,4 @@ INSERT INTO book (title, author, available) VALUES ('Dark Matter', 'Blake Crouch
 ('Seven Sisters', 'Lucinda Riley', 0),
 ('Goblet of Fire', 'J.K Rowling', 1),
 ('Storm Sister', 'Lucinda Riley', 0);
+
